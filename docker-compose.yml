@@ -4,7 +4,7 @@
 # docker stack deploy node-red --compose-file docker-compose-node-red.yml
 # docker-compose -f docker-compose-node-red.yml -p myNoderedProject up
 ################################################################################
-version: "3.7"
+version: '3.7'
 
 services:
   node-red:
@@ -12,11 +12,11 @@ services:
     environment:
       - TZ=Europe/Paris
     ports:
-      - "1880:1880"
+      - '1880:1880'
     networks:
       - node-red-net
     volumes:
-      - "./data:/data"
+      - './data:/data'
 
 networks:
-  node-red-net:
+  node-red-net: docker run -it -p 1880:1880 --name mynodered nodered/node-red -e TZ=Europe/Paris -v ""./data:/data"
