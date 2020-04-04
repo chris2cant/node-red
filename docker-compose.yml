@@ -19,4 +19,4 @@ services:
       - './data:/data'
 
 networks:
-  node-red-net: docker run -it -p 1880:1880 --name mynodered nodered/node-red -e TZ=Europe/Paris -v ""./data:/data"
+  node-red-net:
