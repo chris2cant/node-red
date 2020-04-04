@@ -15,6 +15,26 @@ Package - node-red-contrib-spotify
 4. Fill `Scopes` with authorizations. Example : `user-modify-playback-state user-read-playback-state streaming` [Spotify - Authorization Scopes](https://developer.spotify.com/documentation/general/guides/scopes/)
 5. Click on `Start Authentication`
 
+## Play a playlist
+
+Send to `play` spotify action this kind of payload.
+
+```
+msg.params = [
+    {"context_uri": uriSpotify}
+];
+return msg;
+```
+
+Example
+
+```
+msg.params = [
+    {"context_uri": "spotify:playlist:7xagyBLDKBk8D6wypYa8Ur"}
+];
+return msg;
+```
+
 ## Links
 
 [Spotify - Authorization Scopes](https://developer.spotify.com/documentation/general/guides/scopes/)
