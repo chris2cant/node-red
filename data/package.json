@@ -4,8 +4,6 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
-        "node-red-contrib-broadlink-control": "~1.0.8",
-        "node-red-contrib-covid19": "~1.1.0",
         "node-red-contrib-denon": "~0.1.5",
         "node-red-contrib-google-home-notify": "0.0.7",
         "node-red-contrib-googlehome": "0.0.4",
