@@ -69,16 +69,16 @@ myArray.push({ name: 'Tom' }); // [{ name: 'John'}, { name: 'Doe'}, { name: 'Jac
 ### Object
 
 ```js
-myArray = [{ name: 'John' }, { name: 'Doe' }, { name: 'Jack' }];
+myObject = { firstName: 'John', lastName: 'Doe', age: 42 };
 
 // Access to the value
-console.log(myObject[0]); // "Banana"
-console.log(myObject[1]); // "Cherry"
-console.log(myObject[2]); // "Apple"
+console.log(myObject.firstName); // "John"
+console.log(myObject.lastName); // "Doe"
+console.log(myObject.age); // 42
 
-// Add 'Pineapple' to myArray
-myArray.push('Pineapple'); // ['Banana', 'Cherry', 'Apple', 'Pineapple']
+// Add gender to myObject
+myObject.gender = 'Male'; // { firstName: 'John', lastName: 'Doe', age: 42, gender: 'Male'}
 
-// Replace 'Pineapple' by 'Lemon'
-myArray[3] = 'Lemon'; // ['Banana', 'Cherry', 'Apple', 'Lemon']
+// Replace age by 24
+myObject.age = 24; // { firstName: 'John', lastName: 'Doe', age: 24, gender: 'Male'}
 ```
