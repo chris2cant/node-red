@@ -4,14 +4,37 @@
 
 https://docs.docker.com/install/linux/docker-ce/debian/
 
-```sh
+````sh
 # Install docker
-sudo apt-get remove docker docker-engine docker.io containerd runc; sudo apt-get update; sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common; curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -; sudo apt-key fingerprint 0EBFCD88; sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"; sudo apt-get update; sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get remove docker docker-engine docker.io containerd runc; sudo apt-get update; sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common; curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -; sudo apt-key fingerprint 0EBFCD88;```
+
+
+```sh
+# arm64 ONLY
+sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable";
+````
+
+```sh
+sudo apt-get update; sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
 ```sh
 # Check if docker is installed
 docker --version
+```
+
+## Install on Raspberry
+
+Source : [Installing Docker and Docker Compose on the Raspberry Pi in 5 Simple Steps (2019/10/12)](https://dev.to/rohansawant/installing-docker-and-docker-compose-on-the-raspberry-pi-in-5-simple-steps-3mgl)
+
+```sh
+curl -sSL https://get.docker.com | sh; sudo usermod -aG docker pi; sudo reboot;
+# Test docker
+docker run hello-world;
+# Install dependencies for docker-compose
+sudo apt-get install -y libffi-dev libssl-dev; sudo apt-get install -y python3 python3-pip; sudo apt-get remove python-configparser
+# Install docker-compose
+sudo pip3 install docker-compose
 ```
 
 ## Install docker-compose
@@ -73,4 +96,8 @@ docker-compose stop
 ```sh
 # rm : remove the container
 docker-compose stop
+```
+
+```
+
 ```
